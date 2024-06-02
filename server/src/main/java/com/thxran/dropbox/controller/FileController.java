@@ -22,9 +22,9 @@ public class FileController {
         return ResponseEntity.accepted().body(service.uploadFile(request));
     }
 
-    @GetMapping("get_all_files")
-    public ResponseEntity<List<File>> getAllFiles(@RequestParam("userId") String userId){
-        return ResponseEntity.ok().body(service.getAllFiles(userId));
+    @GetMapping("/get_all_files")
+    public ResponseEntity<List<File>> getAllFiles(){
+        return ResponseEntity.ok().body(service.getAllFiles());
     }
 
     @GetMapping("/get")
@@ -42,8 +42,8 @@ public class FileController {
     }
 
     @GetMapping("/favorite_files")
-    public ResponseEntity<List<File>> getFavoriteFiles(@RequestParam("userId") String userId){
-        return ResponseEntity.ok().body(service.getFavoriteFiles(userId));
+    public ResponseEntity<List<File>> getFavoriteFiles(){
+        return ResponseEntity.ok().body(service.getFavoriteFiles());
     }
 
     @PatchMapping("/archive")
@@ -52,8 +52,8 @@ public class FileController {
     }
 
     @GetMapping("/archive_files")
-    public ResponseEntity<List<File>>  getArchiveFiles(@RequestParam("userId") String userId){
-        return ResponseEntity.ok().body(service.getArchiveFolders(userId));
+    public ResponseEntity<List<File>>  getArchiveFiles(){
+        return ResponseEntity.ok().body(service.getArchiveFolders());
     }
 
     @PatchMapping("/un_archive")

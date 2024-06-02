@@ -23,8 +23,6 @@ public class Folder {
     @Id
     private String id;
 
-    private String userId;
-
     private String name;
     private boolean isArchived = false;
 

@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 @Getter
 @Builder
 public class FolderResponse {
-    private String user_id;
     private String folder_id;
     private String folder_name;
     private String parent_id;

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface FolderRepository extends JpaRepository<Folder, String> {
-    Optional<List<Folder>> findByUserIdAndIsArchivedFalse(String userId);
+    Optional<List<Folder>> findByIsArchivedFalse();
     Optional<List<Folder>> findByParentFolderId(String id);
-    Optional<List<Folder>> findByUserIdAndIsArchivedTrue(String userId);
+    Optional<List<Folder>> findByIsArchivedTrue();
 }

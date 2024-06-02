@@ -22,8 +22,8 @@ public class FolderController {
     }
 
     @GetMapping("/get")
-    public ResponseEntity<List<Folder>> getFolders(@RequestParam("userId") String userId) {
-        return ResponseEntity.ok().body(service.getFolderByUser(userId));
+    public ResponseEntity<List<Folder>> getFolders() {
+        return ResponseEntity.ok().body(service.getFolderByUser());
     }
 
     @GetMapping("/get/{id}")
@@ -45,8 +45,8 @@ public class FolderController {
     }
 
     @GetMapping("/archive_folders")
-    public ResponseEntity<List<Folder>> getArchiveFolders(@RequestParam("userId") String userId){
-        return ResponseEntity.ok().body(service.getArchiveFolder(userId));
+    public ResponseEntity<List<Folder>> getArchiveFolders(){
+        return ResponseEntity.ok().body(service.getArchiveFolder());
     }
 
     @PatchMapping("/un_archive")
